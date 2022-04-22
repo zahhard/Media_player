@@ -61,6 +61,12 @@ class MainActivity : AppCompatActivity() {
             wifiLock.release()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+
+        mediaPlayer.release()
+    }
+
     //mediaPlayer = MediaPlayer.create(context, R.raw.sound_file_1)
     //mediaPlayer.start() // no need to call prepare(); create() does that for you
 
